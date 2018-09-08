@@ -390,37 +390,5 @@ namespace TALLER_DE_MODA
             if (filasafectadas > 0) return true;
             else return false;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /* public static bool Actualizar_tienda(string cid_tienda,string nombre, string telefono, string observacione,string idtienda)
-         {
-             SqlConnection conexion = new SqlConnection("Data Source=" + Environment.UserDomainName + "\\SQLEXPRESS;Initial Catalog=TALLER_MODA;Integrated Security=True");
-             conexion.Open();
-             SqlCommand cmd = new SqlCommand(string.Format("update cliente_tiendas set  cid_tienda ='{0}',nombre = '{1}',telefono ='{2}',obcervacion'{3}' WHERE idtienda = '{4}'", new string[] { cid_tienda, nombre, telefono, observacione, idtienda }), conexion);
-             int filasafectadas = cmd.ExecuteNonQuery();
-             conexion.Close();
-             if (filasafectadas > 0) return true;
-             else return false;
-
-         }*/
-
-
-
-
-
     }
 }
