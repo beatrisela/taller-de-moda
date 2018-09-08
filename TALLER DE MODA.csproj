@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B8C4B14-43C4-46EE-B779-8E58E6E21F43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TALLER_DE_MODA</RootNamespace>
+    <AssemblyName>TALLER DE MODA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="almacen.Designer.cs">
+      <DependentUpon>almacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cambiar contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambiar contraseña.Designer.cs">
+      <DependentUpon>Cambiar contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cliente facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cliente facturas.Designer.cs">
+      <DependentUpon>cliente facturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente nuevo.Designer.cs">
+      <DependentUpon>Cliente nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="impirmirFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="impirmirFactura.Designer.cs">
+      <DependentUpon>impirmirFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proveedor.Designer.cs">
+      <DependentUpon>proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro clientes.Designer.cs">
+      <DependentUpon>Registro clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confeccion de ropa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confeccion de ropa.Designer.cs">
+      <DependentUpon>Confeccion de ropa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cuadrante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cuadrante.Designer.cs">
+      <DependentUpon>cuadrante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="empleado_contratados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empleado_contratados.Designer.cs">
+      <DependentUpon>empleado_contratados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo Empleado.Designer.cs">
+      <DependentUpon>Nuevo Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pedidos.Designer.cs">
+      <DependentUpon>pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tienda clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tienda clientes.Designer.cs">
+      <DependentUpon>tienda clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuarios.Designer.cs">
+      <DependentUpon>usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="almacen.resx">
+      <DependentUpon>almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambiar contraseña.resx">
+      <DependentUpon>Cambiar contraseña.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cliente facturas.resx">
+      <DependentUpon>cliente facturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente nuevo.resx">
+      <DependentUpon>Cliente nuevo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="impirmirFactura.resx">
+      <DependentUpon>impirmirFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="proveedor.resx">
+      <DependentUpon>proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro clientes.resx">
+      <DependentUpon>Registro clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confeccion de ropa.resx">
+      <DependentUpon>Confeccion de ropa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cuadrante.resx">
+      <DependentUpon>cuadrante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empleado_contratados.resx">
+      <DependentUpon>empleado_contratados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo Empleado.resx">
+      <DependentUpon>Nuevo Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pedidos.resx">
+      <DependentUpon>pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="tienda clientes.resx">
+      <DependentUpon>tienda clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuarios.resx">
+      <DependentUpon>usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Cliente_nuevo.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo cliente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton nuevo empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton empleado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton pedidos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton Consulta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleado.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuadrante.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confeccion3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confeccion1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fashion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\272456.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tienda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\provedor.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tienda cliente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
