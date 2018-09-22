@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,20 +15,18 @@ namespace TALLER_DE_MODA
 {
     public partial class usuario : Form
     {
-        public usuario()
+        GestorDeDatosDeUsuario gestor;
+        public usuario(GestorDeDatosDeUsuario gestor)
         {
+            this.gestor = gestor;
             InitializeComponent();
         }
 
         private void Usuario_Load(object sender, EventArgs e)//ventana
         {
-
-            // Aquí se tiene que cargar El nombre + Apellidos de la tabla Empleados para que coja los datos de la BD
-            DataTable dt = new DataTable();//crea una tabla 
-            string consulta = "select IDEMPLEADO, Nombre + ' ' + Apellido1 + ' ' + Apellido2 as Usuario from EMPLEADO";//consulta que se le pasa a la variable 
-            dt = Conexion.Conectar(consulta); //conexion siempre se pone
-            comboBox1_nombre.DisplayMember = "Usuario"; // Lo que el usuario quiere ver!
-            comboBox1_nombre.ValueMember = "IDEMPLEADO";// Lo que mi aplicación quiere usar!
+            DataTable dt = this.gestor.MapaDeIdUsuarioConNombreCompleto();
+            comboBox1_nombre.DisplayMember = "usuario"; // Lo que el usuario quiere ver!
+            comboBox1_nombre.ValueMember = "idempleado";// Lo que mi aplicación quiere usar!
             comboBox1_nombre.DataSource = dt;//de donde sale la información que quiero mostrar!
             comboBox1_nombre.SelectedIndex = 0; //pone el comboBox en el indixe 0
         }
@@ -37,20 +36,30 @@ namespace TALLER_DE_MODA
             // Al detectar que se ha seleccionado otro usuario, debe cargar en el txtBoxID el ID de dicho usuario
             textBox_ID.Text = comboBox1_nombre.SelectedValue.ToString();// selectedValue devuelve el campo de la consulta 
         }
-        private void Button_aceptar_Click(object sender, EventArgs e)
+        private void Button_aceptar_Click(object sender, EventArgs evento)
         {
+            UsuarioModelo usuario = new UsuarioModelo()
+            {
+                idempleado = int.Parse(comboBox1_nombre.SelectedValue.ToString()),
+                clave = textBox_clave.Text,
+                permisos = textBox_permisos.Text
+            };
             try
             {
-                Conexion.Insertar_claves(textBox_ID.Text,  textBox_clave.Text, textBox_permisos.Text);
-                
-                MessageBox.Show("Registrado");
-                
+                if (this.gestor.Insert(usuario))
+                {
+                    MessageBox.Show("Registrado");
+                }
+                else
+                {
+                    MessageBox.Show("NO Registrado!");
+                }
             }
-            catch(Exception  )// Poner el catch para obtener el posible error
+            catch(Exception e)// Poner el catch para obtener el posible error
             {
                 MessageBoxButtons botones = MessageBoxButtons.OK;
-                MessageBox.Show("Error,Introduzca Bien los datos","Mensaje ventana Usuarios",botones,MessageBoxIcon.Error);
-                
+                MessageBox.Show(e.Message.ToString(), "Cágate", botones, MessageBoxIcon.Error);
+                MessageBox.Show("Error,Introduzca Bien los datos", "Mensaje ventana Usuarios", botones, MessageBoxIcon.Error);
             }
           
         }

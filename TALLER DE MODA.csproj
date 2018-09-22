@@ -82,6 +82,10 @@
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DbConexion.cs" />
+    <Compile Include="EmpleadoModelo.cs" />
+    <Compile Include="GestorDeDatosDeEmpleado.cs" />
+    <Compile Include="GestorDeDatosDeUsuario.cs" />
     <Compile Include="impirmirFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +148,7 @@
     <Compile Include="tienda clientes.Designer.cs">
       <DependentUpon>tienda clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioModelo.cs" />
     <Compile Include="usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +164,7 @@
     </Compile>
     <EmbeddedResource Include="almacen.resx">
       <DependentUpon>almacen.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Cambiar contraseña.resx">
       <DependentUpon>Cambiar contraseña.cs</DependentUpon>

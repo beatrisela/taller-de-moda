@@ -44,7 +44,9 @@ namespace TALLER_DE_MODA
         private void Boton_administrador_Click(object sender, EventArgs e)
         {
             this.Hide();
-            usuario usuarios = new usuario();// ventana usuario
+            DbConexion con = new DbConexion();
+            GestorDeDatosDeUsuario gestor = new GestorDeDatosDeUsuario(con);
+            usuario usuarios = new usuario(gestor);// ventana usuario
             usuarios.Show();
         }
         private void Boton_cerrar_tipo_usario_Click(object sender, EventArgs e)
@@ -67,7 +69,9 @@ namespace TALLER_DE_MODA
         }
         private void Imagen_menu_Nempleado_Click(object sender, EventArgs e)
         {
-            Nuevo_Empleado miempleado = new Nuevo_Empleado();//ventana empleado
+            DbConexion conexion = new DbConexion();
+            GestorDeDatosDeEmpleado gestor = new GestorDeDatosDeEmpleado(conexion);
+            Nuevo_Empleado miempleado = new Nuevo_Empleado(gestor);//ventana empleado
             miempleado.Show();  
         }
         private void Imagen_menu_Empleado_Click(object sender, EventArgs e)
